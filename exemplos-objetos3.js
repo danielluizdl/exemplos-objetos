@@ -26,5 +26,10 @@ const pessoa = {
     idade: 30,
     produtosConsumidos
 }
-console.log(pessoa)
+console.log(pessoa.nome);
+console.log(pessoa.idade);
+pessoa.idade = 31;
+console.log(pessoa.idade);
+console.log(pessoa.produtosConsumidos[0].nomeDoProduto)
+console.log(pessoa.produtosConsumidos[produtosConsumidos.length - 1].precounit)
 
