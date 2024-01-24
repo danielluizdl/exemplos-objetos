@@ -27,10 +27,14 @@ const pessoa = {
     produtosConsumidos
 }
 
-let somaTotal =
-    (produtosConsumidos[0].precounit * produtosConsumidos[0].quantidade) +
-    (produtosConsumidos[1].precounit * produtosConsumidos[1].quantidade) +
-    (produtosConsumidos[2].precounit * produtosConsumidos[2].quantidade)
+let somaTotal = 0;
+for (let produto of produtosConsumidos) {
+    somaTotal += produto.precounit * produto.quantidade;
+}
 
-console.log(`O senhor ${pessoa.nome} deve pagar R$${(somaTotal / 100).toFixed(2)}`)
+//(produtosConsumidos[0].precounit * produtosConsumidos[0].quantidade) +
+//(produtosConsumidos[1].precounit * produtosConsumidos[1].quantidade) +
+//(produtosConsumidos[2].precounit * produtosConsumidos[2].quantidade)
+
+console.log(`O senhor ${pessoa.nome} deve pagar R$ ${(somaTotal / 100).toFixed(2)}`)
 
