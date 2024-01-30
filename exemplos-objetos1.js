@@ -3,20 +3,23 @@ const pessoa = {
     idade: 30,
     altura: 1.70,
     temCnh: true,
-    apelidos: [""]
+    apelidos: ["DL", "dLzin", "Dani"]
 }
 
-let possuiCNH = pessoa.temCnh ? "possui CNH" : "não possui CNH";
+let possuiCNH = "";
+if (pessoa.temCnh) {
+    possuiCNH = "possui CNH"
+} else {
+    possuiCNH = "nao possui CNH";
 
-console.log(`${pessoa.nome} tem ${pessoa.idade} anos, ${pessoa.altura} de altura, ${possuiCNH} e`);
+}
+console.log(`${pessoa.nome} tem ${pessoa.idade} anos, ${pessoa.altura} de altura, ${possuiCNH} e `)
 
-const apelidosNaoVazios = pessoa.apelidos.filter(apelido => apelido.trim() !== "");
-
-if (apelidosNaoVazios.length > 0) {
+if (pessoa.apelidos.length > 0) {
     console.log("tem os seguintes apelidos:");
-    for (let apelido of apelidosNaoVazios) {
-        console.log(`- ${apelido}`);
+    for (let apelido of pessoa.apelidos) {
+        console.log(`- {apelido}`)
     }
 } else {
-    console.log("não tem apelido.");
+    console.log("nao tem apelido.")
 }
